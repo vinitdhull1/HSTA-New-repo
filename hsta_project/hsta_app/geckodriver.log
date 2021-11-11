@@ -1,0 +1,52 @@
+1635757453698	geckodriver	INFO	Listening on 127.0.0.1:57700
+1635757456755	mozrunner::runner	INFO	Running command: "C:\\Users\\A7793\\AppData\\Local\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\A7793\\AppData\\Local\\Temp\\rust_mozprofileGhBEsZ"
+1635757457414	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\A7793\\AppData\\Local\\Temp\\rust_mozprofileGhBEsZ\\search.json.mozlz4", (void 0)))
+1635757460540	Marionette	INFO	Listening on port 57708
+1635757461014	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 3: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 3: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 94: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 617: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 66: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 68: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 54: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 2: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 3: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 94: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 617: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 66: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 68: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 54: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 2: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 3: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 94: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 617: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 66: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 68: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 54: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 2: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript error: https://editorial.elsevier.com/static/scripts/dropzone-4.3.0.js, line 427: Error: Dropzone already attached.
+JavaScript error: https://editorial.elsevier.com/static/scripts/ckeditor_4.8/ckeditor.js, line 249: TypeError: c[a] is undefined
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 3: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 94: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 617: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 66: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 68: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 54: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 2: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 3: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 94: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 617: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 66: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 68: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 54: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://editorial.elsevier.com/static/dojo/dojo.js, line 2: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+1635757525475	Marionette	INFO	Stopped listening on port 57708
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

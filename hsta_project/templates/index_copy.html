@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+      {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>HOME - HSTA</title>
+      <script>
+    function show_processing(){
+        document.getElementById('submit_btn_load').style.display="";
+         var x = document.getElementById("MsgBox");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            }
+            else {
+                x.style.display = "none";
+            }
+         }
+    </script>
+  </head>
+  <body>
+
+  <!---------------Header------------------->
+    <div class="mw-100 header p-3">
+        <div class="row">
+            <div class="col-lg-8">
+                <!--<img src="{% static 'images/Aptara-logo.png' %}" style="height:4vh;" alt="logo">-->
+                <h2 class="text-white">APTARA</h2>
+            </div>
+            <div class="col-lg-4 text-right">
+                <a type="button" href="#" style="color:#052F41;" class="btn btn-light font-weight-bold">
+                    USER MANUAL
+                </a>
+                <a type="button" href="{% url 'logout' %}" style="color:#052F41;" class="btn btn-light font-weight-bold">
+                    LOG OUT
+                </a>
+            </div>
+        </div>
+    </div>
+  <!--------------END HEADER-------------->
+
+
+  <!------------UPLOAD FORM-------------------------------->
+  <div class="container mt-2 text-center">
+      <h4 class="text-center" style="color:#052F41;">Health Science of Technical Assessment</h4>
+      <hr>
+      <div class="spinner-border" role="status" id="submit_btn_load" style="display:none;">
+        <span class="sr-only">Loading...</span>
+      </div>
+      {% if messages %}
+      {% for message in messages %}
+      <div class="container m-1 p-1" id="MsgBox">
+          <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="color:#710000;">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+              {% if message.tags != "alert-danger"  %}
+                    {% with a="Click here" %}
+                        <a  href="{{ output }}" download> {{ a }}</a>
+                        to download your output file..
+                    {% endwith %}
+                    {{ message }}
+              {% else %}
+                {{ message }}
+              {% endif %}
+          </div>
+      </div>
+      {% endfor %}
+      {% endif %}
+
+      <form action="{% url 'index' %}" method="post" enctype="multipart/form-data" id="hsta_form">
+          {% csrf_token %}
+      <div class="row">
+          <div class="col-lg-6">
+              <div class="form-group">
+                  <input type="text" class="form-control" name="ISBN" placeholder="Enter ISBN" id="ISBN" required>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" name="title" placeholder="Enter TITLE" id="title" required>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" name="author" placeholder="Enter Author Name" id="author" required>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" name="chapter" placeholder="Enter Chapter" id="chapter" required>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" name="edition" placeholder="Enter Edition" id="edition" required>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" name="email" placeholder="Enter Email (xyz@aptaracorp.com)" id="email" required>
+              </div>
+          </div>
+          <div class="col-lg-6">
+             <div class="form-group files">
+                <!--<label>Upload Your ZIP File </label>-->
+                <input type="file" class="form-control" name="zip_file" multiple="" required>
+              </div>
+          </div>
+          <button type="submit" class="btn btn-submit ml-3" onclick="show_processing()" id="submit_btn">Submit</button>
+      </div>
+      </form>
+  </div>
+
+  <!----------------END FORM-------------->
+
+  <!---------------FOOTER---------------------->
+
+  <div class="fixed-bottom text-center" style="background-color: #052F41;">
+      <p class="m-3 text-white">
+          Copyright &#169; 2021 - Powered By AI
+      </p>
+  </div>
+
+  <!------------END FOOTER--------------------------->
+
+    <!-- Optional JavaScript -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
