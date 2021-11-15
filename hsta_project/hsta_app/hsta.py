@@ -555,10 +555,10 @@ class Fcc:
             try:
                 if len(allImagesList[i].split('-')) == 4:
                     print("allImagesList---->", allImagesList[i])
-                    sheet.cell(x, 11).value = "EMSS Note: "+ figDict1[str(fig_no[i])+''+allImagesList[i].split('-')[2]]
+                    sheet.cell(x, 11).value = "EMSS Note: "+ figDict1[str(fig_no[i])+''+allImagesList[i].split('-')[2]] + "\nDPI INFO: " + dpi[i]
                     print(str(fig_no[i])+''+allImagesList[i].split('-')[2]," hhhhhhhh ")
                 else:
-                    sheet.cell(x, 11).value = "EMSS Note: "+ figDict1[str(fig_no[i])]
+                    sheet.cell(x, 11).value = "EMSS Note: "+ figDict1[str(fig_no[i])] + "\nDPI INFO: " + dpi[i]
             except:
                 pass
 
@@ -591,7 +591,7 @@ class Fcc:
 
             sheet.cell(x, 6).value = oldallImagesList[i]
 
-            sheet.cell(x, 13).value = dpi[i]
+            # sheet.cell(x, 13).value = dpi[i]
 
 
         today = datetime.date.today()

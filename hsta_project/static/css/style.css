@@ -58,10 +58,10 @@
     left: 0;  pointer-events: none;
     width: 100%;
     right: 0;
-    height: 57px;
+    height: 40px;
     content: " or drag zip file here. ";
     display: block;
-    margin: 0 auto;
+    margin: 5px 5px 5px 5px;
     color: #052F41;
     font-weight: 600;
     text-transform: capitalize;
