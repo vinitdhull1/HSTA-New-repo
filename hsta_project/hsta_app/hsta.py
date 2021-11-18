@@ -426,7 +426,8 @@ class Fcc:
                 print(Image.open(figurePath + i).info['dpi'][0], "dpiiiiiiiiiiiiiiiiii")
                 dpi=Image.open(figurePath + i).info['dpi'][0]
 
-            except:
+            except Exception as e:
+                print(e,"Exception***********************Exception")
                 dpi="straight pack away"
                 print("straight pack away")
         oldallImagesList.sort(key=lambda f: int(re.sub('\D', '', f)))
@@ -518,9 +519,8 @@ class Fcc:
                 print(Image.open(figurePath + j).info['dpi'][0], "dpiiiiiiiiiiiiiiiiii")
                 dpi.append(int(Image.open(figurePath + j).info['dpi'][0]))
             except:
-
-                dpi.append("straight pack away")
-                print("straight pack away")
+                dpi.append("straight pick-up")
+                print("straight pick-up")
         print(dpi,"hhh")
         x = 0
         filePathxl = r"" + settings.MEDIA_ROOT + "/created_report/HS_TA_Template.xlsx"
@@ -546,20 +546,28 @@ class Fcc:
                     figDict1[i] = figDict[i]
             except:
                 pass
-        print("----figDict1---->",figDict1)
+        print("----figDict1---->",figDict1, len(citation),"        ",len(dpi))
+        print(dpi)
         for i in range(len(citation)):
+            print(i,"  iiiiiiiiiiiiiiiiiiii  ")
             x = x + 1
             sheet.cell(x, 1).value = fig_no[i]
 
             sheet.cell(x, 2).value = 1
+
             try:
+                print(str(fig_no[i]),"    str(fig_no[i])")
                 if len(allImagesList[i].split('-')) == 4:
                     print("allImagesList---->", allImagesList[i])
-                    sheet.cell(x, 11).value = "EMSS Note: "+ figDict1[str(fig_no[i])+''+allImagesList[i].split('-')[2]] + "\nDPI INFO: " + dpi[i]
+                    sheet.cell(x, 11).value = "EMSS Note: "+ figDict1[str(fig_no[i])+''+allImagesList[i].split('-')[2]] #+ "\nDPI INFO: " + dpi[i]
+                    sheet.cell(x, 11).value = sheet.cell(x, 11).value + "\nDPI INFO: " + str(dpi[i])
                     print(str(fig_no[i])+''+allImagesList[i].split('-')[2]," hhhhhhhh ")
                 else:
-                    sheet.cell(x, 11).value = "EMSS Note: "+ figDict1[str(fig_no[i])] + "\nDPI INFO: " + dpi[i]
-            except:
+                    print(str(fig_no[i]) + '' + allImagesList[i].split('-')[2], " fffffff ")
+                    sheet.cell(x, 11).value = "EMSS Note: "+ figDict1[str(fig_no[i])] #+ "\nDPI INFO: " + dpi[i]
+                    sheet.cell(x, 11).value=sheet.cell(x, 11).value+"\nDPI INFO: " + str(dpi[i])
+            except Exception as e:
+                print(str(fig_no[i]), '            execption   i  ',dpi[i], "  ee  ",e)
                 pass
 
 
@@ -581,11 +589,16 @@ class Fcc:
             else:
                 sheet.cell(x, 5).value = citation[i]
 
-
+            ch=int(chapter[2:6])
+            if ch<10:
+                ch='0'+str(ch)
+            else:
+                ch=str(ch)
+            print(ch, 'chhhhhhhhhhhhhhh*********************')
             if allImagesList[i] == "" and fig_no[i] < 10:
-                allImagesList[i] = "f" + "chapter" + "-" + "0" + str(fig_no[i]) + "-" + isbn + ".eps"
+                allImagesList[i] = "f" + ch + "-" + "0" + str(fig_no[i]) + "-" + isbn + ".eps"
             elif allImagesList[i] == "" and fig_no[i] >= 10:
-                allImagesList[i] = "f" + "chapter" + "-" + str(fig_no[i]) + "-" + isbn + ".eps"
+                allImagesList[i] = "f" + ch + "-" + str(fig_no[i]) + "-" + isbn + ".eps"
 
             sheet.cell(x, 7).value = allImagesList[i]
 
@@ -596,13 +609,13 @@ class Fcc:
 
         today = datetime.date.today()
         date = "{:%d-%b-%Y}".format(today)
-        sheet.cell(2, 2).value = author
+        sheet.cell(2, 9).value = author
         sheet.cell(3, 2).value = title
         sheet.cell(4, 9).value = chapter
         sheet.cell(2, 9).value = isbn
         sheet.cell(5, 9).value = date
         sheet.cell(5, 2).value = email
         sheet.cell(4, 2).value = "Aptara"
-        sheet.cell(3, 9).value = edition
+        sheet.cell(3, 2).value = edition
 
         wb.save(filePathxl)
